@@ -6,10 +6,8 @@ contract StarChain is ERC721 {
   struct Star {
     string name;
   }
-
-  //  Add a name and a symbol for your starNotary tokens
-
-//
+  string public name = "Gry0u Token";
+  string public symbol = "GRT";
 
   mapping(uint256 => Star) public tokenIdToStarInfo;
   mapping(uint256 => uint256) public starsForSale;
@@ -44,15 +42,22 @@ contract StarChain is ERC721 {
     starsForSale[_tokenId] = 0;
   }
 
-// Add a function lookUptokenIdToStarInfo, that looks up the stars using the Token ID, and then returns the name of the star.
+// Function that looks up the stars using the Token ID, and then returns the name of the star.
+  function lookUpTokenIdToStarInfo(uint256 _tokenId) public view returns (string memory _name) {
+    _name = tokenIdToStarInfo[_tokenId];
+  }
 
-//
+// Function to let 2 users exchange their star tokens (provided their are mutually approved)
+  function exchangeStars(uint256 _tokenId1, uint256 _tokenId2) public {
+    // transfer token1 to user2
+    safeTransferFrom(ownerOf(_tokenId1), ownerOf(_tokenId2), _tokenId1)
+    // transfer token2 to user1
+    safeTransferFrom(ownerOf(_tokenId2), ownerOf(_token1), _tokenId2)
+  }
 
-// Add a function called exchangeStars, so 2 users can exchange their star tokens...
-//Do not worry about the price, just write code to exchange stars between users.
-
-// Write a function to Transfer a Star. The function should transfer a star from the address of the caller.
-// The function should accept 2 arguments, the address to transfer the star to, and the token ID of the star.
-//
+// Function to Transfer a Star from the address of the caller to destination address
+  function transfer(address memory to, uint256 _tokenId) public {
+    safeTransferFrom(msg.sender, to, _tokenId)
+  }
 
 }
