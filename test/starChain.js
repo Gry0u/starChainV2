@@ -3,7 +3,7 @@ const StarChain = artifacts.require('./StarChain.sol')
 contract('StarChain', async accs => {
   const user1 = accs[0]
   const user2 = accs[1]
-  const tokenId = 1
+  const tokenId = 0
   const starPrice = web3.utils.toWei('0.01', 'ether')
 
   it('can create a star', async () => {
@@ -51,10 +51,18 @@ contract('StarChain', async accs => {
 
   // 2) 2 users can exchange their stars.
   it('lets 2 users exchange their stars (provided they mutually approved each other)', async () => {
-
+    const instance = await StarChain.deployed()
+    await instance.createStar('Star1', 1, { from: user1 })
+    await instance.createStar('Star2', 2, { from: user2 })
+    // Approve user1 to transfer token of user2
+    await instance.approve(user1, 2, { from: user2 })
+    // swap stars
+    await instance.exchangeStars(1, 2, { from: user1 })
+    assert.equal(await instance.ownerOf(1), user2)
+    assert.equal(await instance.ownerOf(2), user1)
   })
   // 3) Stars Tokens can be transferred from one address to another.
   it('can transfer a token to another address', async () => {
-    
+
   })
 })
