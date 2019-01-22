@@ -43,9 +43,18 @@ contract('StarChain', async accs => {
     assert.equal(+balanceBeforeTx - +starPrice, balanceAfterTx)
   })
 
-  // Write Tests for:
+  it('has a token name and symbol', async () => {
+    const instance = await StarChain.deployed()
+    assert.equal(await instance.name.call(), 'Gry0u Token')
+    assert.equal(await instance.symbol.call(), 'GRT')
+  })
 
-  // 1) The token name and token symbol are added properly.
   // 2) 2 users can exchange their stars.
+  it('lets 2 users exchange their stars (provided they mutually approved each other)', async () => {
+
+  })
   // 3) Stars Tokens can be transferred from one address to another.
+  it('can transfer a token to another address', async () => {
+    
+  })
 })
