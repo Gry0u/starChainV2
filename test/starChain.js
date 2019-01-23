@@ -5,19 +5,21 @@ contract('StarChain', async accs => {
   const user2 = accs[1]
   const tokenId = 0
   const starPrice = web3.utils.toWei('0.01', 'ether')
-
+  // test 1
   it('can create a star', async () => {
     const instance = await StarChain.deployed()
     await instance.createStar('Star', tokenId, { from: user1 })
     assert.equal(await instance.tokenIdToStarInfo.call(tokenId), 'Star')
   })
 
+  // test 2
   it('can put a star up to sale', async () => {
     const instance = await StarChain.deployed()
     await instance.putStarUpForSale(tokenId, starPrice, { from: user1 })
     assert.equal(await instance.starsForSale.call(tokenId), starPrice)
   })
 
+  // test 3
   it('lets a user receive funds after his star is bought by another user', async () => {
     const instance = await StarChain.deployed()
     const balanceBeforeTx = await web3.eth.getBalance(user1)
@@ -26,6 +28,7 @@ contract('StarChain', async accs => {
     assert.equal(+balanceBeforeTx + +starPrice, balanceAfterTx)
   })
 
+  // test 4
   it('lets a user become a owner of the star he bought from another user', async () => {
     const instance = await StarChain.deployed()
     await instance.putStarUpForSale(tokenId, starPrice, { from: user2 })
@@ -34,6 +37,7 @@ contract('StarChain', async accs => {
     assert.equal(await instance.ownerOf.call(tokenId), user1)
   })
 
+  // test 5
   it('decreases the balance of the buyer of a star', async () => {
     const instance = await StarChain.deployed()
     await instance.putStarUpForSale(tokenId, starPrice, { from: user1 })
@@ -43,13 +47,14 @@ contract('StarChain', async accs => {
     assert.equal(+balanceBeforeTx - +starPrice, balanceAfterTx)
   })
 
+  // test 6
   it('has a token name and symbol', async () => {
     const instance = await StarChain.deployed()
     assert.equal(await instance.name.call(), 'Gry0u Token')
     assert.equal(await instance.symbol.call(), 'GRT')
   })
 
-  // 2) 2 users can exchange their stars.
+  // test 7.
   it('lets 2 users exchange their stars (provided they mutually approved each other)', async () => {
     const instance = await StarChain.deployed()
     await instance.createStar('Star1', 1, { from: user1 })

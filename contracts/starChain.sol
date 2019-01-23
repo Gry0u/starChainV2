@@ -49,10 +49,12 @@ contract StarChain is ERC721 {
 
 // Function to let 2 users exchange their star tokens (provided their are mutually approved)
   function exchangeStars(uint256 _tokenId1, uint256 _tokenId2) public {
+    address user1 = ownerOf(_tokenId1);
+    address user2 = ownerOf(_tokenId2);
     // transfer token1 to user2
-    safeTransferFrom(ownerOf(_tokenId1), ownerOf(_tokenId2), _tokenId1);
+    safeTransferFrom(user1, user2, _tokenId1);
     // transfer token2 to user1
-    safeTransferFrom(ownerOf(_tokenId2), ownerOf(_tokenId1), _tokenId2);
+    safeTransferFrom(user2, user1, _tokenId2);
   }
 
 // Function to Transfer a Star from the address of the caller to destination address
