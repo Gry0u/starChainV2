@@ -34,8 +34,16 @@ const App = {
   createStar: async function () {
     const { createStar } = this.starChain.methods
     const name = document.getElementById('starName').value
-    const id = document.getElementById('starID').value
+    const id = document.getElementById('starIdCreate').value
     await createStar(name, id).send({ from: this.account })
+    // console.log(this.account)
+  },
+
+  readStar: async function () {
+    const { lookUpTokenIdToStarInfo } = this.starChain.methods
+    const id = document.getElementById('starIdRead').value
+    const star = await lookUpTokenIdToStarInfo(id).call()
+    document.getElementById('readResult').innerHTML = star
   }
 };
 
