@@ -1,0 +1,27 @@
+{
+  "name": "starchainv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gry0u/starChainV2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gry0u/starChainV2/issues"
+  },
+  "homepage": "https://github.com/Gry0u/starChainV2#readme",
+  "dependencies": {
+    "any-promise": "^1.3.0",
+    "bindings": "^1.3.1",
+    "truffle-hdwallet-provider": "^1.0.0-web3one.5"
+  }
+}
