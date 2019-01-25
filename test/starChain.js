@@ -65,9 +65,14 @@ contract('StarChain', async accs => {
     await instance.exchangeStars(1, 2, { from: user1 })
     assert.equal(await instance.ownerOf(1), user2)
     assert.equal(await instance.ownerOf(2), user1)
+    // user1 has token2, user2 has token1
   })
-  // 3) Stars Tokens can be transferred from one address to another.
+  // test 8
   it('can transfer a token to another address', async () => {
-
+    const instance = await StarChain.deployed()
+    await instance.createStar('StarToTransfer', 3, { from: user1 })
+    // transfer to user 2
+    await instance.transfer(user2, 3)
+    assert.equal(await instance.ownerOf(3), user2)
   })
 })
