@@ -5,55 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>StarChain DAPP V2 Front End</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald" rel="stylesheet">
+  <link href='./index.css' rel='stylesheet' type='text/css'>
+  <link href='./responsive.css' rel='stylesheet' type='text/css'>
   <script src="./index.js"></script>
 </head>
 <body>
-  <h1>StarChain Token DAPP</h1>
-  <h2>Create a Star</h2>
-  <label>Star Name:
-    <input type="text" id="starName">
-  </label>
-  <br><br>
-  <label>Star ID:
-    <input type="text" id="starIdCreate">
-  </label>
-  <br><br>
-  <button id="createStar" onclick='App.createStar()'>Create a Star</button>
-  <hr>
-  <h2>Look up a Star</h2>
-  <label>Star ID:
-    <input type="text" id="starIdRead">
-  </label>
-  <br><br>
-  <button id="readStar" onclick='App.readStar()'>Look up a Star</button>
-  <br><br>
-  <span id="readResult"></span>
-  <hr>
-  <!-- <h2>Buy a Star</h2>
-  <label>Star ID:
-    <input type="text" id="starIdBuy">
-  </label>
-  <br><br>
-  <label>Price:
-    <input type="text" id="buyPrice">
-  </label>
-  <br><br>
-  <button id="buyStar" onclick='App.buyStar()'>Buy a Star</button>
-  <hr>
-  <h2>Sell a Star</h2>
-  <label>Star ID:
-    <input type="text" id="starIdSell">
-  </label>
-  <br><br>
-  <label>Price:
-    <input type="text" id="sellPrice">
-  </label>
-  <br><br>
-  <button id="buyStar" onclick='App.sellStar()'>Sell a Star</button>
-  <br><br> -->
-  <!--Add an input box and a button to Lookup a star by ID using tokenIdToStarInfo-->
-  <span id="status">Status</span>
-  <br>
+  <header>
+    <nav>
+      <h1 aria-label="title">StarChain Token DAPP</h1>
+    </nav>
+    <ul id="breadcrumb" aria-label="Breadcrumb" role="navigation">
+      <li>
+        <a href="/">Create</a>
+      </li>
+      <li>
+        <a href="/">Read</a>
+      </li>
+      <li>
+        <a href="/">Buy</a>
+      </li>
+      <li>
+        <a href="/">Sell</a>
+      </li>
+      <li>
+        <a href="/">Swap</a>
+      </li>
+      <li>
+        <a href="/">Transfer</a>
+      </li>
+      <li>
+        <a href="/">Approve</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <ul class="flexbox">
+      <li class="list">
+        <div>
+          <h2>Create a Star</h2>
+          <label>Star Name:
+            <input type="text" id="starName">
+          </label> <br>
+          <label>Star ID:
+            <input type="text" id="starIdCreate">
+          </label> <br>
+          <button id="createStar" onclick='App.createStar()'>Create a Star</button>
+        </div>
+      </li>
+      <li class="list">
+        <div>
+          <h2>Look up a Star</h2>
+          <label>Star ID:
+            <input type="text" id="starIdRead">
+          </label><br>
+          <button id="readStar" onclick='App.readStar()'>Look up a Star</button>
+          <br><br>
+          <span id="readResult"></span>
+        </div>
+      </li>
+      <li class="list">
+        <div>
+          <h2>Buy a Star</h2>
+          <label>Star ID:
+            <input type="text" id="starIdBuy">
+          </label><br>
+          <label>Price:
+            <input type="text" id="buyPrice">
+          </label><br>
+          <button id="buyStar" onclick='App.buyStar()'>Buy a Star</button>
+        </div>
+      </li>
+      <li class="list">
+        <div>
+          <h2>Sell a Star</h2>
+          <label>Star ID:
+            <input type="text" id="starIdSell">
+          </label><br>
+          <label>Price:
+            <input type="text" id="sellPrice">
+          </label><br>
+          <button id="sellStar" onclick='App.sellStar()'>Sell a Star</button>
+        </div>
+      </li>
+      <li class="list">
+        <div>
+          <h2>Swap Stars</h2>
+          <label>Star ID 1:
+            <input type="text" id="starIdSwap1">
+          </label><br>
+          <label>Star ID 2:
+            <input type="text" id="starIdSwap2">
+          </label><br>
+          <button id="swap" onclick='App.swapStars()'>Swap</button>
+        </div>
+      </li>
+      <li class="list">
+        <div>
+          <h2>Approve</h2>
+          <label>Address:
+            <input type="text" id="address">
+          </label><br>
+          <button id="approve" onclick='App.approve()'>Approve</button>
+        </div>
+      </li>
+    </ul>
+  </main>
+  <footer>
+    <span id="status">Status</span>
+  </footer>
 </body>
 </html>
