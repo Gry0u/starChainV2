@@ -1,0 +1,14 @@
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.list {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
