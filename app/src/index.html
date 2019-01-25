@@ -44,68 +44,47 @@
       <li class="list">
         <div>
           <h2>Create a Star</h2>
-          <label>Star Name:
-            <input type="text" id="starName">
-          </label> <br>
-          <label>Star ID:
-            <input type="text" id="starIdCreate">
-          </label> <br>
+            <input type="text" id="starName" value="Star Name">
+            <input type="text" id="starIdCreate" value='Star ID'>
           <button id="createStar" onclick='App.createStar()'>Create a Star</button>
         </div>
       </li>
       <li class="list">
         <div>
           <h2>Look up a Star</h2>
-          <label>Star ID:
-            <input type="text" id="starIdRead">
-          </label><br>
+          <input type="text" id="starIdRead" value='Star ID'>
           <button id="readStar" onclick='App.readStar()'>Look up a Star</button>
-          <br><br>
-          <span id="readResult"></span>
+          <span id="readResult">Test</span>
         </div>
       </li>
       <li class="list">
         <div>
           <h2>Buy a Star</h2>
-          <label>Star ID:
-            <input type="text" id="starIdBuy">
-          </label><br>
-          <label>Price:
-            <input type="text" id="buyPrice">
-          </label><br>
+            <input type="text" id="starIdBuy" value='Star ID'>
+            <input type="text" id="buyPrice" value="Buying Price">
           <button id="buyStar" onclick='App.buyStar()'>Buy a Star</button>
         </div>
       </li>
       <li class="list">
         <div>
           <h2>Sell a Star</h2>
-          <label>Star ID:
-            <input type="text" id="starIdSell">
-          </label><br>
-          <label>Price:
-            <input type="text" id="sellPrice">
-          </label><br>
+            <input type="text" id="starIdSell" value="Star ID">
+            <input type="text" id="sellPrice" value="Selling Price">
           <button id="sellStar" onclick='App.sellStar()'>Sell a Star</button>
         </div>
       </li>
       <li class="list">
         <div>
           <h2>Swap Stars</h2>
-          <label>Star ID 1:
-            <input type="text" id="starIdSwap1">
-          </label><br>
-          <label>Star ID 2:
-            <input type="text" id="starIdSwap2">
-          </label><br>
+            <input type="text" id="starIdSwap1" value="First Star ID">
+            <input type="text" id="starIdSwap2" value="Second Star ID">
           <button id="swap" onclick='App.swapStars()'>Swap</button>
         </div>
       </li>
       <li class="list">
         <div>
           <h2>Approve</h2>
-          <label>Address:
-            <input type="text" id="address">
-          </label><br>
+            <input type="text" id="address" value="Ethereum Address">
           <button id="approve" onclick='App.approve()'>Approve</button>
         </div>
       </li>

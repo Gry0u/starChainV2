@@ -1,7 +1,7 @@
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
-    background-color: #eee;
+    /* background-color: #eee; */
     font-size: 17px;
     margin: 0;
     width: 100%;
@@ -21,22 +21,27 @@
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #005096;
+    color: #eee;
     text-decoration: none;
+}
+#breadcrumb li a:hover {
+    text-decoration: underline;
 }
 
 header, h2 {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
     font-family: 'Major Mono Display', monospace;
 }
 
 body {
   font-family: 'Oswald', sans-serif;
+  background: #ffffff url('./galaxy_background.jpg');
+  color: #eee;
 }
 
 li {
   list-style-type: none;
   margin: auto;
+
 }
 
 div {
@@ -55,4 +60,11 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+input {
+  margin: 10px;
+  width: 100%;
+  background: rgba(0,0,0,0.5)
+  color: #eee;
 }
