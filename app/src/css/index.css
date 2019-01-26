@@ -65,8 +65,8 @@ button {
   border-radius: 10px;
   font-family: 'Oswald', sans-serif;
   margin-top: 2%;
-  max-height: 30px;
-  min-height: 30px;
+  max-height: 25px;
+  min-height: 25px;
   padding-bottom: 2px;
   text-align: center;
 }
@@ -87,8 +87,8 @@ input {
   color: #eee;
   line-height: 25px;
   margin-top: 2%;
-  max-height: 30px;
-  min-height: 30px;
+  max-height: 25px;
+  min-height: 25px;
   text-indent: 5px;
   width: 98%;
 }
@@ -98,11 +98,22 @@ p {
 }
 
 /*  Footer */
+footer {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+}
+
+.contact_wrapper {
+  padding: 0;
+}
+
+.contact img {
+  width: 80%;
+}
+
 .contact {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 60%;
+  font-size: 0.7em;
 }
 
 .contact_title {
