@@ -1,70 +1,97 @@
-#breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    /* background-color: #eee; */
+header, h2 {
+  font-family: 'Major Mono Display', monospace;
+}
+
+body {
+  background: #ffffff url('./galaxy_background.jpg');
+  color: #eee;
+  font-family: 'Oswald', sans-serif;
+}
+
+/*  -----------------------Breadcrumb */
+
+.breadcrumb {
     font-size: 17px;
+    list-style: none;
     margin: 0;
-    width: 100%;
 }
 
 /* Display list items side by side */
-#breadcrumb li {
+.breadcrumb li {
     display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
-    padding: 8px;
+.breadcrumb li+li:before {
     color: black;
     content: "/\00a0";
+    padding: 8px;
 }
 
 /* Add a color to all links inside the list */
-#breadcrumb li a {
+.breadcrumb li a {
     color: #eee;
     text-decoration: none;
 }
-#breadcrumb li a:hover {
+.breadcrumb li a:hover {
     text-decoration: underline;
 }
 
-header, h2 {
-    font-family: 'Major Mono Display', monospace;
+/* ------Function forms */
+h2 {
+  font-size: 0.9em;
+  margin-top: 15px;
 }
 
-body {
-  font-family: 'Oswald', sans-serif;
-  background: #ffffff url('./galaxy_background.jpg');
-  color: #eee;
+.flexbox {
+  padding: 0; /* Override inline ul padding*/
 }
 
 li {
   list-style-type: none;
-  margin: auto;
-
 }
 
-div {
-  margin: auto;
-  display: inline;
+.function {
+  margin-left: 10px;
 }
 
 button {
-  border-radius: 10px;
-  padding: 10px;
+  -moz-appearance: button;
   -webkit-appearance: button;
-  appearance: button;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 10px;
   font-family: 'Oswald', sans-serif;
-  max-width: 300px;
+  margin-top: 2%;
+  max-height: 30px;
+  min-height: 30px;
+  padding-bottom: 2px;
+  text-align: center;
 }
 
 button:hover {
   cursor: pointer;
 }
 
+
+
 input {
-  margin: 10px;
-  width: 100%;
-  background: rgba(0,0,0,0.5)
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #eee;
+  border: 2px solid rgba(186, 137, 241, 0.21);
+  border-radius: 10px;
+  box-sizing: content-box;
   color: #eee;
+  line-height: 25px;
+  margin-top: 2%;
+  max-height: 30px;
+  min-height: 30px;
+  text-indent: 5px;
+  width: 98%;
+}
+
+p {
+  font-size: 0.7em;
 }

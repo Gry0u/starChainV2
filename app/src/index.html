@@ -15,7 +15,7 @@
     <nav>
       <h1 aria-label="title">StarChain Token DAPP</h1>
     </nav>
-    <ul id="breadcrumb" aria-label="Breadcrumb" role="navigation">
+    <!-- <ul class="breadcrumb" aria-label="Breadcrumb" role="navigation">
       <li>
         <a href="/">Create</a>
       </li>
@@ -37,56 +37,48 @@
       <li>
         <a href="/">Approve</a>
       </li>
-    </ul>
+    </ul> -->
   </header>
   <main>
+    <div class="wallet">
+      <span>You own:</span>
+    </div>
     <ul class="flexbox">
-      <li class="list">
-        <div>
+      <li class="function">
           <h2>Create a Star</h2>
-            <input type="text" id="starName" value="Star Name">
-            <input type="text" id="starIdCreate" value='Star ID'>
+          <input type="text" id="starName" value="Star Name">
+          <input type="text" id="starIdCreate" value='Star ID'>
           <button id="createStar" onclick='App.createStar()'>Create a Star</button>
-        </div>
       </li>
-      <li class="list">
-        <div>
+      <li class="function">
           <h2>Look up a Star</h2>
           <input type="text" id="starIdRead" value='Star ID'>
-          <button id="readStar" onclick='App.readStar()'>Look up a Star</button>
           <span id="readResult">Test</span>
-        </div>
+          <button id="readStar" onclick='App.readStar()'>Look up a Star</button>
       </li>
-      <li class="list">
-        <div>
+      <li class="function">
           <h2>Buy a Star</h2>
-            <input type="text" id="starIdBuy" value='Star ID'>
-            <input type="text" id="buyPrice" value="Buying Price">
+          <input type="text" id="starIdBuy" value='Star ID'>
+          <input type="text" id="buyPrice" value="Buying Price">
           <button id="buyStar" onclick='App.buyStar()'>Buy a Star</button>
-        </div>
       </li>
-      <li class="list">
-        <div>
+      <li class="function">
           <h2>Sell a Star</h2>
-            <input type="text" id="starIdSell" value="Star ID">
-            <input type="text" id="sellPrice" value="Selling Price">
+          <input type="text" id="starIdSell" value="Star ID">
+          <input type="text" id="sellPrice" value="Selling Price">
           <button id="sellStar" onclick='App.sellStar()'>Sell a Star</button>
-        </div>
       </li>
-      <li class="list">
-        <div>
+      <li class="function">
           <h2>Swap Stars</h2>
-            <input type="text" id="starIdSwap1" value="First Star ID">
-            <input type="text" id="starIdSwap2" value="Second Star ID">
+          <input type="text" id="starIdSwap1" value="First Star ID">
+          <input type="text" id="starIdSwap2" value="Second Star ID">
           <button id="swap" onclick='App.swapStars()'>Swap</button>
-        </div>
       </li>
-      <li class="list">
-        <div>
+      <li class="function">
           <h2>Approve</h2>
-            <input type="text" id="address" value="Ethereum Address">
+          <p>Grant right to the following address to transfer your token(s)</p>
+          <input type="text" id="address" value="Ethereum Address">
           <button id="approve" onclick='App.approve()'>Approve</button>
-        </div>
       </li>
     </ul>
   </main>

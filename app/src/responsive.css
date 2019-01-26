@@ -7,8 +7,18 @@ nav {
   flex-flow: row wrap;
 }
 
-.list {
+.flexbox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.function {
   display: flex;
   flex-flow: column nowrap;
-  width: 100%;
+  max-width: 150px;
+}
+
+.function > * {
+  flex: 1 100%;
 }
