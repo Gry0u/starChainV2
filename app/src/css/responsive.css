@@ -1,8 +1,6 @@
 body {
-  overflow-x: hidden;
-  /* position: relative; */
-  /* overflow-y: hidden; */
   height: 100%;
+  overflow-x: hidden;
 }
 
 nav {
@@ -33,6 +31,5 @@ nav {
 }
 
 .contact {
-  /* justify-content: space-around; */
   margin: auto;
 }

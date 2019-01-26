@@ -14,7 +14,13 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "img-loader": "^3.0.1",
     "openzeppelin-solidity": "^2.1.2",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
     "web3": "^1.0.0-beta.37"
   }
 }

@@ -1,5 +1,8 @@
 import Web3 from "web3";
 import starChainArtifact from "../../build/contracts/StarChain.json";
+import './css/index.css'
+import './css/responsive.css'
+import './img/galaxy_background.jpg'
 
 const App = {
   web3: null,
