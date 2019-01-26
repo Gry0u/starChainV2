@@ -1,0 +1,70 @@
+#breadcrumb {
+    padding: 10px 40px 16px;
+    list-style: none;
+    /* background-color: #eee; */
+    font-size: 17px;
+    margin: 0;
+    width: 100%;
+}
+
+/* Display list items side by side */
+#breadcrumb li {
+    display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+#breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+#breadcrumb li a {
+    color: #eee;
+    text-decoration: none;
+}
+#breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+header, h2 {
+    font-family: 'Major Mono Display', monospace;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: #ffffff url('./galaxy_background.jpg');
+  color: #eee;
+}
+
+li {
+  list-style-type: none;
+  margin: auto;
+
+}
+
+div {
+  margin: auto;
+  display: inline;
+}
+
+button {
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-appearance: button;
+  appearance: button;
+  font-family: 'Oswald', sans-serif;
+  max-width: 300px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  margin: 10px;
+  width: 100%;
+  background: rgba(0,0,0,0.5)
+  color: #eee;
+}
