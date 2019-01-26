@@ -3,9 +3,10 @@ header, h2 {
 }
 
 body {
-  background: #ffffff url('./galaxy_background.jpg');
+  background: #ffffff url('../img/galaxy_background.jpg');
   color: #eee;
   font-family: 'Oswald', sans-serif;
+  height: 100%;
 }
 
 /*  -----------------------Breadcrumb */
@@ -93,5 +94,17 @@ input {
 }
 
 p {
+  font-size: 0.7em;
+}
+
+/*  Footer */
+.contact {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 60%;
+}
+
+.contact_title {
   font-size: 0.7em;
 }
