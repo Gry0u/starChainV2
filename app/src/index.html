@@ -40,9 +40,7 @@
     </ul> -->
   </header>
   <main>
-    <div class="wallet">
-      <span>You own:</span>
-    </div>
+    <p id='wallet'>You own:</p>
     <ul class="flexbox">
       <li class="function">
           <h2>Create a Star</h2>
@@ -53,19 +51,19 @@
       <li class="function">
           <h2>Look up a Star</h2>
           <input type="text" id="starIdRead" value='Star ID'>
-          <span id="readResult">Test</span>
+          <span id="readResult"></span>
           <button id="readStar" onclick='App.readStar()'>Look up a Star</button>
       </li>
       <li class="function">
           <h2>Buy a Star</h2>
           <input type="text" id="starIdBuy" value='Star ID'>
-          <input type="text" id="buyPrice" value="Buying Price">
+          <input type="text" id="buyPrice" value="Buying Price (ETH)">
           <button id="buyStar" onclick='App.buyStar()'>Buy a Star</button>
       </li>
       <li class="function">
           <h2>Sell a Star</h2>
           <input type="text" id="starIdSell" value="Star ID">
-          <input type="text" id="sellPrice" value="Selling Price">
+          <input type="text" id="sellPrice" value="Selling Price (ETH)">
           <button id="sellStar" onclick='App.sellStar()'>Sell a Star</button>
       </li>
       <li class="function">

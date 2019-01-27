@@ -27,6 +27,7 @@ const App = {
     } catch (error) {
       console.error("Could not connect to contract or chain.");
     }
+    this.refreshWallet()
   },
 
   setStatus: message => {
@@ -39,7 +40,7 @@ const App = {
     const name = document.getElementById('starName').value
     const id = document.getElementById('starIdCreate').value
     await createStar(name, id).send({ from: this.account })
-    // console.log(this.account)
+    this.refreshWallet()
   },
 
   readStar: async function () {
@@ -47,6 +48,31 @@ const App = {
     const id = document.getElementById('starIdRead').value
     const star = await lookUpTokenIdToStarInfo(id).call()
     document.getElementById('readResult').innerHTML = star
+  },
+
+  refreshWallet: async function () {
+    const { balanceOf } = this.starChain.methods
+    const wallet = document.getElementById('wallet')
+    const ownedStars = await balanceOf(this.account).call()
+    wallet.innerHTML = `You own ${ownedStars} Stars`
+  },
+
+  sellStar: async function () {
+    const { putStarUpForSale } = this.starChain.methods
+    let price = document.getElementById('sellPrice').value
+    price = this.web3.utils.toWei(price, 'ether')
+    const star = document.getElementById('starIdSell').value
+    await putStarUpForSale(star, price).send({ from: this.account })
+    this.refreshWallet()
+  },
+
+  buyStar: async function () {
+    const { buyStar } = this.starChain.methods
+    const star = document.getElementById('starIdBuy').value
+    let price = document.getElementById('buyPrice').value
+    price = this.web3.utils.toWei(price, 'ether')
+    await buyStar(star).send({ from: this.account, value: price })
+    this.refreshWallet()
   }
 };
 
