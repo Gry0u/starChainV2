@@ -59,17 +59,30 @@ nav {
 }
 
 /* medium screens */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .flexbox {
-    width: 55%;
+    width: 600px;
   }
   h2 {
     font-size: 1.4em;
   }
   footer {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   p {
     font-size: 1.2em;
   }
+}
+
+  /* large screens */
+  @media screen and (min-width: 1250px) {
+    h2 {
+      font-size: 1.5em;
+    }
+    footer {
+      font-size: 1.5em;
+    }
+    p {
+      font-size: 1.2em;
+    }
 }
