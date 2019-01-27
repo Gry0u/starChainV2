@@ -12,12 +12,13 @@ nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  margin: auto;
 }
 
 .function {
   display: flex;
   flex-flow: column nowrap;
-  max-width: 150px;
+  width: 150px;
 }
 
 .function > * {
@@ -32,4 +33,43 @@ nav {
 
 .contact {
   margin: auto;
+}
+
+/* medium screens */
+@media screen and (min-width: 650px) {
+  .flexbox {
+    width: 70%;
+  }
+  .function {
+    width: 200px;
+  }
+
+  footer {
+    font-size: 1em;
+  }
+  p {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  input, button {
+    font-size: 1em;
+  }
+}
+
+/* medium screens */
+@media screen and (min-width: 800px) {
+  .flexbox {
+    width: 55%;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  footer {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1.2em;
+  }
 }
