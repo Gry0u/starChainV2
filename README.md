@@ -1,4 +1,4 @@
-# Star Notary DAPP
+# [StarChain DAPP](https://starchain.herokuapp.com/)
 In this project I deployed a unfungible token contract (ERC721) on the Ethereum Rinkeby network.  
 I also develop a minimalist Front End to interact with the main functions of the contract:  
 The user can then register a new stars that will be stored as an ERC721 token on the blockchain, or look up for existing ones..
@@ -34,7 +34,9 @@ npm run dev
 - ERC-721 Token Name: *Gry0u Token*  
 - ERC-721 Token Symbol: *GRT*  
 - “Token Address” on the Rinkeby Network: *0xfC435ceBdF28250D4f3920d713F9737c12E3823f*  
-- [Test ERC 721 token creation](https://rinkeby.etherscan.io/token/0xfc435cebdf28250d4f3920d713f9737c12e3823f?a=0x45517697e4fc823be60a066ecca8139ce9c4659e)  
+- [Test ERC 721 token creation](https://rinkeby.etherscan.io/token/0xfc435cebdf28250d4f3920d713f9737c12e3823f?a=0x45517697e4fc823be60a066ecca8139ce9c4659e)
+
+## [Deployed front end client](https://starchain.herokuapp.com/)
 
 ## Resources
 - [Truffle](https://www.truffleframework.com/): smart contracts and DAPP development framework.
