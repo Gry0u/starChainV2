@@ -21,6 +21,6 @@
     "openzeppelin-solidity": "^2.1.2",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
-    "web3": "^1.0.0-beta.37"
+    "web3": "^1.2.4"
   }
 }
