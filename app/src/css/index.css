@@ -1,46 +1,15 @@
-header, h2 {
-  font-family: 'Major Mono Display', monospace;
-}
-
 body {
   background: #ffffff url('../img/galaxy_background.jpg');
   color: #eee;
-  font-family: 'Oswald', sans-serif;
+  font-family: monospace;
   height: 100%;
 }
 
-/*  -----------------------Breadcrumb */
-
-.breadcrumb {
-    font-size: 17px;
-    list-style: none;
-    margin: 0;
+nav {
+  text-align: center;
 }
-
-/* Display list items side by side */
-.breadcrumb li {
-    display: inline;
-}
-
-/* Add a slash symbol (/) before/behind each list item */
-.breadcrumb li+li:before {
-    color: black;
-    content: "/\00a0";
-    padding: 8px;
-}
-
-/* Add a color to all links inside the list */
-.breadcrumb li a {
-    color: #eee;
-    text-decoration: none;
-}
-.breadcrumb li a:hover {
-    text-decoration: underline;
-}
-
 /* ------Function forms */
 h2 {
-  font-size: 0.9em;
   margin-top: 15px;
 }
 
@@ -63,7 +32,6 @@ button {
   background: rgba(255, 255, 255, 0.7);
   border: none;
   border-radius: 10px;
-  font-family: 'Oswald', sans-serif;
   margin-top: 2%;
   max-height: 25px;
   min-height: 25px;
@@ -100,22 +68,16 @@ p {
 /*  Footer */
 footer {
   bottom: 0;
+  font-size: 30px;
   position: relative;
-  width: 100%;
+  text-align: center;
 }
 
-.contact_wrapper {
-  padding: 0;
+
+img {
+  max-width: 50px;
 }
 
-.contact img {
-  max-width: 28px;
-}
-
-.contact {
-  font-size: 0.7em;
-}
-
-.contact_title {
-  font-size: 0.7em;
+a {
+  color: rgb(85, 173, 223);
 }

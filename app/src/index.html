@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>StarChain DAPP V2 Front End</title>
+  <title>StarChain</title>
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald" rel="stylesheet">
   <link href='./css/index.css' rel='stylesheet'>
   <link href='./css/responsive.css' rel='stylesheet'>
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <script src="./index.js"></script>
 </head>
 <body>
@@ -15,32 +16,8 @@
     <nav>
       <h1 aria-label="title">StarChain Token DAPP</h1>
     </nav>
-    <!-- <ul class="breadcrumb" aria-label="Breadcrumb" role="navigation">
-      <li>
-        <a href="/">Create</a>
-      </li>
-      <li>
-        <a href="/">Read</a>
-      </li>
-      <li>
-        <a href="/">Buy</a>
-      </li>
-      <li>
-        <a href="/">Sell</a>
-      </li>
-      <li>
-        <a href="/">Swap</a>
-      </li>
-      <li>
-        <a href="/">Transfer</a>
-      </li>
-      <li>
-        <a href="/">Approve</a>
-      </li>
-    </ul> -->
   </header>
   <main>
-    <p id='wallet'></p>
     <ul class="flexbox">
       <li class="function">
           <h2>Create a Star</h2>
@@ -65,19 +42,6 @@
           <input type="text" id="sellPrice" value="Selling Price (ETH)">
           <button id="sellStar" onclick='App.sellStar()'>Sell a Star</button>
       </li>
-      <!-- <li class="function">
-          <h2>Swap Stars</h2>
-          <input type="text" id="starIdSwap1" value="First Star ID">
-          <input type="text" id="starIdSwap2" value="Second Star ID">
-          <button id="swap" onclick='App.swap()'>Swap</button>
-      </li>
-      <li class="function">
-          <h2>Approve</h2>
-          <p>Grant right to the following address to transfer your token</p>
-          <input type="text" id="starIdApprove" value="Star ID">
-          <input type="text" id="address" value="Ethereum Address">
-          <button id="approve" onclick='App.approve()'>Approve</button>
-      </li> -->
       <li class="function">
           <h2>Transfer</h2>
           <input type="text" id="starIdTransfer" value="Star ID">
@@ -86,22 +50,15 @@
       </li>
     </ul>
   </main>
-  <p id="status">Status</p>
   <footer>
-    <h2 class="contact_title">Contact</h2>
-    <ul class="contact_wrapper">
-      <li class='contact'>
-        <a href="https://www.linkedin.com/in/griou">
-          <img src="https://s1.qwant.com/thumbr/0x0/9/e/5e84988b12671be8473e18ead3f63ac7310edb6d949566fac06579abc47f84/LinkedIn-Icon.png?u=https%3A%2F%2Fwww.silversands.co.uk%2Fwp-content%2Fuploads%2FLinkedIn-Icon.png&q=0&b=1&p=0&a=1" alt="linkedin_logo">
+    <p>Made by
+        <a href='https://twitter.com/r1oga'>@r1oga</a>
+      </p>
+      <p>
+        <a href='https://github.com/r1oga/starChainV2'>
+          <img src='https://www.shareicon.net/data/2015/09/15/101512_logo_512x512.png' alt='GitHub logo'/>
         </a>
-      </li>
-      <li class="contact">gauthriou@protonmail.com</li>
-      <li class="contact">
-        <a href="https://github.com/Gry0u">
-          <img src="https://www.shareicon.net/data/2015/09/15/101512_logo_512x512.png" alt="github_logo">
-        </a>
-      </li>
-    </ul>
+      </p>
   </footer>
 </body>
 </html>
