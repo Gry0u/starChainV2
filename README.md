@@ -1,4 +1,4 @@
-# [StarChain DAPP](https://starchain.herokuapp.com/)
+# [StarChain DAPP](https://r1oga.github.io/starChainV2/)
 In this project I deployed a unfungible token contract (ERC721) on the Ethereum Rinkeby network.  
 I also develop a minimalist Front End to interact with the main functions of the contract:  
 The user can then register a new stars that will be stored as an ERC721 token on the blockchain, or look up for existing ones..
