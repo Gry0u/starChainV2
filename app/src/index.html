@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>StarChain</title>
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald" rel="stylesheet">
+  <link href='./css/index.css' rel='stylesheet'>
+  <link href='./css/responsive.css' rel='stylesheet'>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <script src="./index.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 aria-label="title">StarChain Token DAPP</h1>
+    </nav>
+  </header>
+  <main>
+    <ul class="flexbox">
+      <li class="function">
+          <h2>Create a Star</h2>
+          <input type="text" id="starName" value="Star Name">
+          <input type="text" id="starIdCreate" value='Star ID'>
+          <button id="createStar" onclick='App.createStar()'>Create a Star</button>
+      </li>
+      <li class="function">
+          <h2>Look up a Star</h2>
+          <input type="text" id="starIdRead" value='Star ID'>
+          <button id="readStar" onclick='App.readStar()'>Look up a Star</button>
+      </li>
+      <li class="function">
+          <h2>Buy a Star</h2>
+          <input type="text" id="starIdBuy" value='Star ID'>
+          <input type="text" id="buyPrice" value="Buying Price (ETH)">
+          <button id="buyStar" onclick='App.buyStar()'>Buy a Star</button>
+      </li>
+      <li class="function">
+          <h2>Sell a Star</h2>
+          <input type="text" id="starIdSell" value="Star ID">
+          <input type="text" id="sellPrice" value="Selling Price (ETH)">
+          <button id="sellStar" onclick='App.sellStar()'>Sell a Star</button>
+      </li>
+      <li class="function">
+          <h2>Transfer</h2>
+          <input type="text" id="starIdTransfer" value="Star ID">
+          <input type="text" id="dest" value="Ethereum Address">
+          <button id="transfer" onclick='App.transfer()'>Transfer</button>
+      </li>
+    </ul>
+  </main>
+  <footer>
+    <p>Made by
+        <a href='https://twitter.com/r1oga'>@r1oga</a>
+      </p>
+      <p>
+        <a href='https://github.com/r1oga/starChainV2'>
+          <img src='https://www.shareicon.net/data/2015/09/15/101512_logo_512x512.png' alt='GitHub logo'/>
+        </a>
+      </p>
+  </footer>
+</body>
+</html>

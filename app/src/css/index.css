@@ -1,0 +1,83 @@
+body {
+  background: #ffffff url('../img/galaxy_background.jpg');
+  color: #eee;
+  font-family: monospace;
+  height: 100%;
+}
+
+nav {
+  text-align: center;
+}
+/* ------Function forms */
+h2 {
+  margin-top: 15px;
+}
+
+.flexbox {
+  padding: 0; /* Override inline ul padding*/
+}
+
+li {
+  list-style-type: none;
+}
+
+.function {
+  margin-left: 10px;
+}
+
+button {
+  -moz-appearance: button;
+  -webkit-appearance: button;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 10px;
+  margin-top: 2%;
+  max-height: 25px;
+  min-height: 25px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+
+input {
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #eee;
+  border: 2px solid rgba(186, 137, 241, 0.21);
+  border-radius: 10px;
+  box-sizing: content-box;
+  color: #eee;
+  line-height: 25px;
+  margin-top: 2%;
+  max-height: 25px;
+  min-height: 25px;
+  text-indent: 5px;
+  width: 98%;
+}
+
+p {
+  font-size: 0.7em;
+}
+
+/*  Footer */
+footer {
+  bottom: 0;
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+}
+
+
+img {
+  max-width: 50px;
+}
+
+a {
+  color: rgb(85, 173, 223);
+}
